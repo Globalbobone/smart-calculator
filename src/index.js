@@ -11,7 +11,6 @@ class SmartCalculator {
     let s = this.stack.join('');
     this.value = eval(s);
     return this;
-    //return this.result = this.result + number;
   }
   
   subtract(number) {
@@ -39,9 +38,9 @@ class SmartCalculator {
   }
 
   pow(number) {
-    let p = Math.pow(this.stack.pop(), number);
-    //this.stack.push('+');
-    this.stack.push(p);
+    //let p = Math.pow(this.stack.pop(), number);
+    this.stack.push('**');
+    this.stack.push(number); 
     let s = this.stack.join('');
     this.value = eval(s);
     return this;
